@@ -1,0 +1,13 @@
+<h1>New Car</h1>
+<%= form_with model: @car do |car| %>
+  <%= car.label :year, 'Year: ' %>
+  <%= car.text_field :year %>
+
+  <%= car.label :make, 'Make: ' %>
+  <%= car.text_field :make %>
+
+  <%= car.label :model, 'Model: ' %>
+  <%= car.text_field :model %>
+
+  <%= car.submit %>
+<% end %>
