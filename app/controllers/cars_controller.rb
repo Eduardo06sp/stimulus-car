@@ -5,6 +5,7 @@ class CarsController < ApplicationController
 
   def new
     @car = Car.new
+    @car.trims.build
   end
 
   def create
