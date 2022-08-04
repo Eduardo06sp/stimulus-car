@@ -23,6 +23,7 @@ class CarsController < ApplicationController
   private
 
   def car_params
-    params.require(:car).permit(:year, :make, :model)
+    params.require(:car).permit(:year, :make, :model, trims_attributes:
+                                %i[name body_kit forced_induction wheels transmission sound_system])
   end
 end
