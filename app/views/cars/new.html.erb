@@ -9,5 +9,26 @@
   <%= car.label :model, 'Model: ' %>
   <%= car.text_field :model %>
 
+  <h2>Add a Trim</h2>
+  <%= car.fields_for :trims do |trim| %>
+    <%= trim.label :name, 'Name: ' %>
+    <%= trim.text_field :name %>
+
+    <%= trim.label :body_kit, 'Body Kit: ' %>
+    <%= trim.text_field :body_kit %>
+
+    <%= trim.label :forced_induction, 'Forced Induction: ' %>
+    <%= trim.text_field :forced_induction %>
+
+    <%= trim.label :wheels, 'Wheels: ' %>
+    <%= trim.text_field :wheels %>
+
+    <%= trim.label :transmission, 'Transmission: ' %>
+    <%= trim.text_field :transmission %>
+
+    <%= trim.label :sound_system, 'Sound System: ' %>
+    <%= trim.text_field :sound_system %>
+  <% end %>
+
   <%= car.submit %>
 <% end %>
