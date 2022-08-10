@@ -9,26 +9,26 @@
   <%= car.label :model, 'Model: ' %>
   <%= car.text_field :model %>
 
-  <h2>Add a Trim</h2>
-  <%= car.fields_for :trims do |trim| %>
-    <%= trim.label :name, 'Name: ' %>
-    <%= trim.text_field :name %>
+  <template id="new_trim_form">
+    <label for="cars_trims_attributes_0_name">Name: </label>
+    <input id="cars_trims_attributes_0_name" type="text" name="car[trims_attributes][0][name]">
+    <!-- the 0 (which would be the key), does not matter here, use the timestamp for the current date -->
 
-    <%= trim.label :body_kit, 'Body Kit: ' %>
-    <%= trim.text_field :body_kit %>
+    <label for="cars_trims_attributes_0_body_kit">Body Kit: </label>
+    <input id="cars_trims_attributes_0_body_kit" type="text" name="car[trims_attributes][0][body_kit]">
 
-    <%= trim.label :forced_induction, 'Forced Induction: ' %>
-    <%= trim.text_field :forced_induction %>
+    <label for="cars_trims_attributes_0_forced_induction">Forced Induction: </label>
+    <input id="cars_trims_attributes_0_forced_induction" type="text" name="car[trims_attributes][0][forced_induction]">
 
-    <%= trim.label :wheels, 'Wheels: ' %>
-    <%= trim.text_field :wheels %>
+    <label for="cars_trims_attributes_0_wheels">Wheels: </label>
+    <input id="cars_trims_attributes_0_wheels" type="text" name="car[trims_attributes][0][wheels]">
 
-    <%= trim.label :transmission, 'Transmission: ' %>
-    <%= trim.text_field :transmission %>
+    <label for="cars_trims_attributes_0_transmission">Transmission: </label>
+    <input id="cars_trims_attributes_0_transmission" type="text" name="car[trims_attributes][0][transmission]">
 
-    <%= trim.label :sound_system, 'Sound System: ' %>
-    <%= trim.text_field :sound_system %>
-  <% end %>
+    <label for="cars_trims_attributes_0_sound_system">Sound System: </label>
+    <input id="cars_trims_attributes_0_sound_system" type="text" name="car[trims_attributes][0][sound_system]">
+  </template>
 
   <%= car.submit %>
 <% end %>
