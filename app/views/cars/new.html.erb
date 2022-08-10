@@ -9,7 +9,7 @@
   <%= car.label :model, 'Model: ' %>
   <%= car.text_field :model %>
 
-  <template id="new_trim_form">
+  <template data-trim-target="newTrimFields">
     <label for="cars_trims_attributes_0_name">Name: </label>
     <input id="cars_trims_attributes_0_name" type="text" name="car[trims_attributes][0][name]">
     <!-- the 0 (which would be the key), does not matter here, use the timestamp for the current date -->
