@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ['newTrimFields']
+  static targets = ['newTrimFields', 'trimAddButton']
 
   addNewFields() {
     const trimForm = this.newTrimFieldsTarget.content.cloneNode(true);
@@ -18,6 +18,6 @@ export default class extends Controller {
     trimInputs.forEach((input) => input.setAttribute('id', generateUniqueValue(input, 'id')));
     trimInputs.forEach((input) => input.setAttribute('name', generateUniqueValue(input, 'name')));
 
-    this.element.append(trimForm);
+    this.trimAddButtonTarget.before(trimForm);
   }
 }
